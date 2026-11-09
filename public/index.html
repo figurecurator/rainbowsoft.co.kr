@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1e9">
+  <meta name="description" content="레인보우소프트가 만드는 두 가지 도구. 피규어와 판매처를 찾는 피규어 큐레이터, 브라우저 SAML 로그인으로 AWS CLI를 연결하는 samlgate.">
+  <meta property="og:title" content="RainbowSoft · 피규어 큐레이터와 samlgate">
+  <meta property="og:description" content="찾던 피규어를 발견하고, 브라우저 로그인으로 AWS CLI 작업을 시작하세요.">
+  <meta property="og:url" content="https://rainbowsoft.co.kr/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://rainbowsoft.co.kr/">
+  <link rel="stylesheet" href="/styles.css">
+  <title>RainbowSoft · 피규어 큐레이터와 samlgate</title>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 이동</a>
+  <header class="site-header wrap">
+    <a class="brand" href="/" aria-label="RainbowSoft 홈">RainbowSoft</a>
+    <nav aria-label="주 메뉴">
+      <a href="#figure-curator">피규어 큐레이터</a>
+      <a href="#samlgate">samlgate</a>
+    </nav>
+  </header>
+  <main class="wrap" id="main">
+    <section class="intro" aria-labelledby="intro-title">
+      <p class="eyebrow intro-label"><span></span> 레인보우소프트</p>
+      <h1 id="intro-title">취향을 찾고,<br>일을 시작하는 도구.</h1>
+      <p class="intro-copy">수집가를 위한 피규어 카탈로그와 <br>개발자를 위한 AWS 로그인 도구를 만듭니다.</p>
+    </section>
+    <div class="products">
+      <section class="product figure" id="figure-curator" aria-labelledby="figure-title">
+        <div class="product-visual figure-visual" aria-hidden="true">
+          <img src="/mascot.png" width="1254" height="1254" alt="">
+        </div>
+        <div class="product-copy">
+          <p class="eyebrow">01 / 피규어 카탈로그</p>
+          <h2 id="figure-title">피규어 큐레이터</h2>
+          <p class="pitch">찾던 피규어와 판매처를 한곳에서.</p>
+          <p class="detail">상품명이나 캐릭터로 둘러보고, 제품 번호나 JAN으로 원하는 판본을 찾아보세요. 상품 상세에서 등록된 판매처와 가격 정보를 확인할 수 있습니다.</p>
+          <div class="actions">
+            <a class="button button-figure" href="https://figure-curator.com/">서비스 열기 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+      <section class="product saml" id="samlgate" aria-labelledby="saml-title">
+        <div class="product-visual terminal-visual">
+          <div class="terminal" aria-label="samlgate 사용 예시">
+            <div class="terminal-bar"><span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>shell</span></div>
+            <div class="terminal-code">
+              <p><span aria-hidden="true">$ </span><code>samlgate login</code></p>
+              <p class="terminal-caption">브라우저에서 SAML 로그인</p>
+              <p><span aria-hidden="true">$ </span><code>aws sts get-caller-identity --profile saml</code></p>
+            </div>
+          </div>
+        </div>
+        <div class="product-copy">
+          <p class="eyebrow">02 / 오픈소스 CLI</p>
+          <h2 id="saml-title">samlgate</h2>
+          <p class="pitch">브라우저 로그인으로 AWS CLI 시작하기.</p>
+          <p class="detail">평소 쓰는 브라우저에서 조직 계정으로 로그인하면, samlgate가 AWS STS 임시 자격 증명을 받아 CLI 프로필에 저장합니다. Windows와 Apple Silicon Mac용 배포본을 제공합니다.</p>
+          <div class="actions">
+            <a class="button button-saml" href="https://github.com/figurecurator/samlgate/releases/latest">다운로드 <span aria-hidden="true">↗</span></a>
+            <a class="secondary" href="https://github.com/figurecurator/samlgate/blob/main/README.ko.md">설치 안내 <span aria-hidden="true">↗</span></a>
+            <a class="secondary" href="https://github.com/figurecurator/samlgate">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer wrap">
+    <div class="footer-top">
+      <a class="brand" href="https://rainbowsoft.co.kr/">RainbowSoft</a>
+      <nav aria-label="RainbowSoft 제품">
+        <a href="https://figure-curator.com/">피규어 큐레이터</a>
+        <a href="https://github.com/figurecurator/samlgate">samlgate</a>
+      </nav>
+    </div>
+    <div class="footer-meta">
+      <p>© 2026 RainbowSoft</p>
+      <p>사업자등록번호 282-12-02932</p>
+      <a href="mailto:contact@rainbowsoft.co.kr">contact@rainbowsoft.co.kr</a>
+      <nav aria-label="지원 및 정책"><a href="/support/">지원</a><a href="/privacy/">개인정보처리방침</a><a href="/terms/">이용약관</a></nav>
+    </div>
+  </footer>
+</body>
+</html>
