@@ -55,6 +55,18 @@ h1, h2, p { margin: 0; }
 .button-saml:hover { background: #173626; }
 .secondary { font-size: .86rem; font-weight: 640; }
 
+.agent-setup { width: 100%; min-width: 0; margin-bottom: 1.5rem; padding-top: 1.2rem; border-top: 1px solid #c9d0bf; }
+.agent-setup h3 { margin: 0; font-size: 1rem; letter-spacing: -.02em; }
+.agent-setup > p:not(.copy-status) { color: var(--muted); font-size: .88rem; line-height: 1.7; margin-top: .3rem; }
+.prompt-box { display: flex; align-items: flex-start; gap: .6rem; margin-top: .8rem; padding: .75rem .75rem .75rem .9rem; border: 1px solid #748477; border-radius: 10px; background: #111b15; color: #eef3e7; }
+.prompt-code { flex: 1; min-width: 0; margin: 0; font: .8rem/1.65 ui-monospace, Consolas, monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
+.prompt-code:focus-visible { outline: 2px solid #b8da9f; outline-offset: 3px; border-radius: 3px; }
+.prompt-code::selection, .prompt-code ::selection { background: #3d5542; color: #fff; }
+.copy-button { flex: none; min-width: 4.2rem; min-height: 2.25rem; padding: .4rem .7rem; border: 1px solid #748477; border-radius: 7px; background: #26382d; color: #eef3e7; font: inherit; font-size: .8rem; font-weight: 700; cursor: pointer; }
+.copy-button:hover { background: #355040; }
+.copy-button:focus-visible { outline: 3px solid #b8da9f; outline-offset: 2px; }
+.copy-status { min-height: 1.4em; margin-top: .45rem; color: #38634a; font-size: .8rem; font-weight: 650; }
+
 .terminal-visual { display: grid; place-items: center; background: radial-gradient(ellipse at 20% 10%, #3d5542, #192b22 75%); padding: 8%; }
 .terminal { width: 100%; border: 1px solid #748477; border-radius: 10px; background: #111b15; color: #eef3e7; overflow: hidden; box-shadow: 0 12px 30px #10171066; }
 .terminal-bar { display: flex; gap: .8rem; align-items: center; padding: .65rem .9rem; color: #d0d9cd; background: #26382d; font: .75rem ui-monospace, Consolas, monospace; }
@@ -94,4 +106,6 @@ h1, h2, p { margin: 0; }
   .site-header .brand { font-size: 1.05rem; }
   .site-footer { margin-top: 2rem; }
   .footer-meta { align-items: start; }
+  .prompt-box { flex-direction: column; align-items: stretch; }
+  .copy-button { align-self: flex-end; }
 }
