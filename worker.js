@@ -3,6 +3,8 @@ const samlgateHome = new Set(["/samlgate", "/samlgate/", "/samlgate/index.html"]
 const samlgateAssets = new Map([
   ["/", "/samlgate/"],
   ["/styles.css", "/samlgate/styles.css"],
+  ["/mascot.png", "/samlgate/mascot.png"],
+  ["/favicon.png", "/samlgate/favicon.png"],
 ]);
 
 export default {
