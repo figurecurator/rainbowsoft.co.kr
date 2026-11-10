@@ -59,6 +59,16 @@
           <h2 id="saml-title">samlgate</h2>
           <p class="pitch">브라우저 로그인으로 AWS CLI 시작하기.</p>
           <p class="detail">평소 쓰는 브라우저에서 조직 계정으로 로그인하면, samlgate가 AWS STS 임시 자격 증명을 받아 CLI 프로필에 저장합니다. Windows와 Apple Silicon Mac용 배포본을 제공합니다.</p>
+          <div class="agent-setup">
+            <h3 id="agent-setup-title">코딩 에이전트로 설정하기</h3>
+            <p>Claude Code나 Codex에 아래 문장을 붙여 넣으면 설치, 첫 로그인, 에이전트 지침 추가까지 진행합니다.</p>
+            <div class="prompt-box">
+              <pre class="prompt-code" id="agent-setup-prompt" tabindex="0" aria-label="에이전트에 붙여 넣을 설정 문장"><code>Set up samlgate for AWS sign-in on this computer by following
+https://raw.githubusercontent.com/figurecurator/samlgate/main/docs/agent-setup.md</code></pre>
+              <button class="copy-button" type="button" data-copy-target="agent-setup-prompt" aria-label="설정 문장 복사">복사</button>
+            </div>
+            <p class="copy-status" role="status" aria-live="polite"></p>
+          </div>
           <div class="actions">
             <a class="button button-saml" href="https://github.com/figurecurator/samlgate/releases/latest">다운로드 <span aria-hidden="true">↗</span></a>
             <a class="secondary" href="https://github.com/figurecurator/samlgate/blob/main/README.ko.md">설치 안내 <span aria-hidden="true">↗</span></a>
@@ -83,5 +93,37 @@
       <nav aria-label="지원 및 정책"><a href="/support/">지원</a><a href="/privacy/">개인정보처리방침</a><a href="/terms/">이용약관</a></nav>
     </div>
   </footer>
+  <script>
+    document.querySelectorAll("[data-copy-target]").forEach((button) => {
+      const target = document.getElementById(button.dataset.copyTarget);
+      const status = button.closest(".agent-setup").querySelector(".copy-status");
+      let timer;
+      const show = (label, message) => {
+        button.textContent = label;
+        status.textContent = message;
+        clearTimeout(timer);
+        timer = setTimeout(() => { button.textContent = "복사"; status.textContent = ""; }, 2500);
+      };
+      const selectText = () => {
+        const range = document.createRange();
+        range.selectNodeContents(target);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        target.focus();
+        show("복사", "자동 복사를 쓸 수 없어 문장을 선택했습니다. Ctrl+C 또는 ⌘C로 복사하세요.");
+      };
+      button.addEventListener("click", async () => {
+        const text = target.textContent;
+        if (!navigator.clipboard || !window.isSecureContext) return selectText();
+        try {
+          await navigator.clipboard.writeText(text);
+          show("복사됨", "설정 문장을 클립보드에 복사했습니다.");
+        } catch {
+          selectText();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
