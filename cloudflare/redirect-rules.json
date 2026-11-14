@@ -1,0 +1,77 @@
+{
+  "zone_id": "b9465e94ba9fcf67acb8038bba5e61a4",
+  "ruleset_id": "5c62516034784b3482a762c0e0203f31",
+  "phase": "http_request_dynamic_redirect",
+  "rules": [
+    {
+      "ref": "rainbowsoft_samlgate_home",
+      "description": "Redirect legacy samlgate home paths to its own domain",
+      "expression": "http.host eq \"rainbowsoft.co.kr\" and http.request.uri.path in {\"/samlgate\" \"/samlgate/\" \"/samlgate/index.html\"}",
+      "action": "redirect",
+      "enabled": true,
+      "action_parameters": {
+        "from_value": {
+          "target_url": { "value": "https://samlgate.rainbowsoft.co.kr/" },
+          "status_code": 302,
+          "preserve_query_string": true
+        }
+      }
+    },
+    {
+      "ref": "rainbowsoft_samlgate_readme",
+      "description": "Redirect legacy Korean samlgate README to GitHub",
+      "expression": "http.host eq \"rainbowsoft.co.kr\" and http.request.uri.path eq \"/samlgate/README.ko.html\"",
+      "action": "redirect",
+      "enabled": true,
+      "action_parameters": {
+        "from_value": {
+          "target_url": { "value": "https://github.com/figurecurator/samlgate/blob/main/README.ko.md" },
+          "status_code": 301,
+          "preserve_query_string": true
+        }
+      }
+    },
+    {
+      "ref": "rainbowsoft_oshi_atlas_section",
+      "description": "Redirect Oshi Atlas paths to the homepage section",
+      "expression": "http.host eq \"rainbowsoft.co.kr\" and http.request.uri.path in {\"/oshi-atlas\" \"/oshi-atlas/\"}",
+      "action": "redirect",
+      "enabled": true,
+      "action_parameters": {
+        "from_value": {
+          "target_url": { "value": "https://rainbowsoft.co.kr/#oshi-atlas" },
+          "status_code": 302,
+          "preserve_query_string": true
+        }
+      }
+    },
+    {
+      "ref": "rainbowsoft_privacy",
+      "description": "Redirect company privacy links to Figure Curator policy",
+      "expression": "http.host eq \"rainbowsoft.co.kr\" and http.request.uri.path in {\"/privacy\" \"/privacy/\"}",
+      "action": "redirect",
+      "enabled": true,
+      "action_parameters": {
+        "from_value": {
+          "target_url": { "value": "https://figure-curator.com/privacy" },
+          "status_code": 302,
+          "preserve_query_string": true
+        }
+      }
+    },
+    {
+      "ref": "rainbowsoft_terms",
+      "description": "Redirect company terms links to Figure Curator policy",
+      "expression": "http.host eq \"rainbowsoft.co.kr\" and http.request.uri.path in {\"/terms\" \"/terms/\"}",
+      "action": "redirect",
+      "enabled": true,
+      "action_parameters": {
+        "from_value": {
+          "target_url": { "value": "https://figure-curator.com/terms" },
+          "status_code": 302,
+          "preserve_query_string": true
+        }
+      }
+    }
+  ]
+}
