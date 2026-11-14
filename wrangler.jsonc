@@ -11,8 +11,7 @@
   },
   "routes": [
     { "pattern": "rainbowsoft.co.kr", "custom_domain": true },
-    { "pattern": "www.rainbowsoft.co.kr", "custom_domain": true },
-    { "pattern": "samlgate.rainbowsoft.co.kr", "custom_domain": true }
+    { "pattern": "www.rainbowsoft.co.kr", "custom_domain": true }
   ],
   "observability": {
     "enabled": true,
