@@ -33,13 +33,13 @@
     },
     {
       "ref": "rainbowsoft_oshi_atlas_section",
-      "description": "Redirect Oshi Atlas paths to the homepage section",
+      "description": "Redirect legacy Oshi Atlas paths to the homepage",
       "expression": "http.host eq \"rainbowsoft.co.kr\" and http.request.uri.path in {\"/oshi-atlas\" \"/oshi-atlas/\"}",
       "action": "redirect",
       "enabled": true,
       "action_parameters": {
         "from_value": {
-          "target_url": { "value": "https://rainbowsoft.co.kr/#oshi-atlas" },
+          "target_url": { "value": "https://rainbowsoft.co.kr/" },
           "status_code": 302,
           "preserve_query_string": true
         }
