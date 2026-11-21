@@ -265,7 +265,6 @@ a:focus-visible { outline: 3px solid currentColor; outline-offset: 5px; }
   line-height: 1.65;
 }
 
-.footer-meta nav { margin-left: auto; gap: 10px 16px; }
 .site-footer a { text-decoration: none; }
 
 .policy {
@@ -313,14 +312,16 @@ a:focus-visible { outline: 3px solid currentColor; outline-offset: 5px; }
   .samlgate h2 { font-size: clamp(3.45rem, 13vw, 5.35rem); }
   .chapter-copy p { margin-block: 16px 23px; }
   .chapter-copy .project-type { margin-bottom: 11px; }
-  .footer-top nav, .footer-meta nav { width: 100%; margin-left: 0; }
+  .footer-top nav { width: 100%; margin-left: 0; }
   .closing { --shade: linear-gradient(180deg, #211b3130, #211b31e8 47%, #211b31f5 100%); }
 }
 
 @media (max-width: 365px) {
-  .site-header .brand { width: 104px; }
-  .site-header nav { column-gap: 9px; }
-  .site-header .nav-support { display: none; }
+  .site-header { width: calc(100% - 24px); gap: 8px; }
+  .site-header .brand { width: 92px; }
+  .site-header nav { column-gap: 6px; }
+  .site-header nav a { font-size: .7rem; }
+  .site-header .nav-support { padding-inline: 5px; }
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -23,4 +23,4 @@ npx wrangler@4.156.0 deploy
 
 이 저장소에서 관리하는 다섯 규칙의 정의는 `cloudflare/redirect-rules.json`에 있습니다. 기존 `canonical_rainbowsoft_host` 규칙 다음에 적용합니다. Wrangler 배포는 zone 규칙을 배포하지 않으므로, 규칙 변경 시 Cloudflare 대시보드 또는 Rulesets API로 별도 반영해야 합니다. JSON의 `rules`로 전체 ruleset을 덮어쓰지 말고 `ref`로 해당 규칙만 추가·수정하여 기존 정규화 규칙을 보존하세요. 로컬 `wrangler dev`에서는 zone 리다이렉트가 적용되지 않습니다.
 
-samlgate의 GitHub Pages custom domain은 `samlgate.rainbowsoft.co.kr`이며 Cloudflare DNS에서 `figurecurator.github.io`를 가리킵니다. 회사 Worker에 samlgate custom domain을 다시 추가하지 마세요. 지원 페이지는 회사와 제품 문의, 공통 footer를 제공합니다. 개인정보처리방침과 이용약관은 피규어 큐레이터의 정책 페이지로 연결합니다.
+samlgate의 GitHub Pages custom domain은 `samlgate.rainbowsoft.co.kr`이며 Cloudflare DNS에서 `figurecurator.github.io`를 가리킵니다. 회사 Worker에 samlgate custom domain을 다시 추가하지 마세요. 헤더의 문의 메뉴는 회사와 제품 문의를 안내하는 지원 페이지로 연결합니다. 기존 `/privacy/`와 `/terms/` 주소는 피규어 큐레이터의 정책 페이지로 연결합니다.
